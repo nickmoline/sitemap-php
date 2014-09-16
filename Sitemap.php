@@ -206,10 +206,10 @@ class Sitemap {
 	 */
 	private function getLastModifiedDate($date) {
 		if (ctype_digit($date)) {
-			return date('Y-m-d', $date);
+			return date(DATE_W3C, $date);
 		} else {
 			$date = strtotime($date);
-			return date('Y-m-d', $date);
+			return date(DATE_W3C, $date);
 		}
 	}
 
